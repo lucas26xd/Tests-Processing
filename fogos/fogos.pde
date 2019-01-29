@@ -15,7 +15,7 @@ void draw(){
     f.add(new foguete());
   }
   
-  for(int i = 0; i < f.size(); i++){
+  for(int i = f.size()-1; i >= 0; i--){
     f.get(i).update(); //Atualiza sua posição
     f.get(i).show(); //Mostra cada fogo de artifício na tela
     if(f.get(i).fade == 0) //Se o mesmo já apagou, remove-o da lista
