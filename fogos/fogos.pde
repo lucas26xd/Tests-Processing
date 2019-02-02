@@ -1,4 +1,5 @@
-import processing.sound.*;
+import processing.sound.SoundFile;
+
 SoundFile file;
 PImage img;
 ArrayList<foguete> fgt = new ArrayList<foguete>();
