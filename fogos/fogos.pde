@@ -25,5 +25,5 @@ void draw() {
     if (fgt.get(i).fade == 0) //Se o mesmo já apagou, remove-o da lista
       fgt.remove(i);
   }
-  //println(fgt.size());
+  println(fgt.size());
 }

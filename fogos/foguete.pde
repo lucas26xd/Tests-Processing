@@ -19,7 +19,7 @@ class foguete {
     //translate(x, ymax);
     for (int i = 0; i < 800; i++) {
       //Por ser uma distribuição uniforme, probabilisticamente os brilhos formaram um círculo com centro sendo o fogo, sendo assim apenas mudei aleatoriamente de 8 a 100 suas distãncias em relação ao centro
-      brilhos.add(PVector.random2D().mult(random(5, 100)));
+      brilhos.add(PVector.random2D().mult(random(5, random(100, 120))));
     }
     //resetMatrix();
   }
@@ -31,14 +31,14 @@ class foguete {
       fill(cor);
       ellipse(x, y, 5, 5);
     } else {
-      if (frameCount - fr < 15) { //O fogo fica amarelo por 15 frames para representar a explosão
+      if (frameCount - fr < 10) { //O fogo fica amarelo por 15 frames para representar a explosão
         fill(255, 255, 0, 180);
         ellipse(x, y, 5, 5);
       } else {
         play(); //Executa som de estouro
         fr = -1; //Usado agora como flag para indicar que as posições dos brilhos podem ser atualizadas e som ser executado
         fill(cor, fade);
-        fade --;
+        fade--;
         if (fade < 0)
           fade = 0;
         push();
